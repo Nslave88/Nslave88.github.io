@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>javascript笔记</title>
+      <link href="/2023/09/25/javascript%E7%AC%94%E8%AE%B0/"/>
+      <url>/2023/09/25/javascript%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>（1）函数本质是通过 Function类 new 出来的对象</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>通道数理解</title>
       <link href="/2023/09/19/%E9%80%9A%E9%81%93%E6%95%B0%E7%90%86%E8%A7%A3/"/>
       <url>/2023/09/19/%E9%80%9A%E9%81%93%E6%95%B0%E7%90%86%E8%A7%A3/</url>
