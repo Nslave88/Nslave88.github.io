@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>return的用法</title>
+      <link href="/2023/10/05/return%E7%94%A8%E6%B3%95/"/>
+      <url>/2023/10/05/return%E7%94%A8%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> textarea = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;textarea&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> ul = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;ul&#x27;</span>)</span><br><span class="line">    <span class="comment">// 添加事件</span></span><br><span class="line">    btn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">//查看textarea的value值：利用console.dir(textarea)查找textarea的哪个属性中包含有输入的内容</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//获取textarea的内容 </span></span><br><span class="line">      <span class="keyword">var</span> value = textarea.<span class="property">value</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// 判断输入内容不能为空</span></span><br><span class="line">      <span class="keyword">if</span> (value == <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;输入的内容不能为空&#x27;</span>)</span><br><span class="line">        <span class="comment">//  return 语句用于提前结束按钮点击事件处理程序（即btn.onclick函数）</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 创建li元素</span></span><br><span class="line">      <span class="keyword">var</span> li = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;li&#x27;</span>)</span><br><span class="line">      <span class="comment">// 将内容填充进去</span></span><br><span class="line">      li.<span class="property">innerHTML</span> = value</span><br><span class="line">      <span class="comment">// 将li元素添加到ul下面</span></span><br><span class="line">      <span class="comment">// ul.children[0]是ul中子元素的第一个</span></span><br><span class="line">      ul.<span class="title function_">insertBefore</span>(li, ul.<span class="property">children</span>[<span class="number">0</span>])</span><br><span class="line">      <span class="comment">// 添加完成之后，清空文本域的内容</span></span><br><span class="line">      textarea.<span class="property">value</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h2 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h2><p><code>return</code> 语句用于提前结束按钮点击事件处理程序（即<code>btn.onclick</code>函数)</p><h2 id="具体来说"><a href="#具体来说" class="headerlink" title="具体来说"></a>具体来说</h2><p>​如果文本域（<code>textarea</code>）的值为空（<code>value == &#39;&#39;</code>），则会显示一个警告弹窗，然后使用 <code>return</code> 语句来提前结束函数的执行。这意味着如果用户没有输入任何内容，函数会在此处停止执行，不会执行后续的代码。这是为了避免添加空的列表项到 <code>ul</code> 元素中</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>正则对象</title>
       <link href="/2023/09/26/%E6%AD%A3%E5%88%99%E5%AF%B9%E8%B1%A1/"/>
       <url>/2023/09/26/%E6%AD%A3%E5%88%99%E5%AF%B9%E8%B1%A1/</url>
