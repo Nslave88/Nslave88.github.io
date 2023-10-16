@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>js的阻塞机制</title>
+      <link href="/2023/10/16/js%E7%9A%84%E9%98%BB%E5%A1%9E%E6%9C%BA%E5%88%B6/"/>
+      <url>/2023/10/16/js%E7%9A%84%E9%98%BB%E5%A1%9E%E6%9C%BA%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="阻塞机制"><a href="#阻塞机制" class="headerlink" title="阻塞机制"></a>阻塞机制</h1><p>js阻塞机制，跟js引擎的单线程处理方式有关，每个window一个js线程。所谓单线程，即在某个特定的时刻只有特定的代码能够被执行，并阻塞其它的代码</p><h1 id="重点重点！"><a href="#重点重点！" class="headerlink" title="重点重点！"></a>重点重点！</h1><p>[js阻塞机制]: <a href="https://blog.csdn.net/C_B_W_/article/details/116173486">https://blog.csdn.net/C_B_W_/article/details/116173486</a>“原文出处”</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>闭包</title>
       <link href="/2023/10/15/%E9%97%AD%E5%8C%85/"/>
       <url>/2023/10/15/%E9%97%AD%E5%8C%85/</url>
