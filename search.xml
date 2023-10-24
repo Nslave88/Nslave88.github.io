@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>解构赋值</title>
+      <link href="/2023/10/24/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+      <url>/2023/10/24/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>​解构赋值是对赋值运算符的扩展。</p><p>​他是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。</p><p>​在代码书写上简洁且易读，语义更加清晰明了；也方便了复杂对象中数据字段获取。</p><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>​数组模式匹配</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [ 变量列表 ] = 数组</span><br></pre></td></tr></table></figure><p>​对象模式匹配</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>&#123;变量列表&#125; = 对象</span><br></pre></td></tr></table></figure><h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><p>​数组模式匹配</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">       <span class="comment">// a = 1</span></span><br><span class="line">       <span class="comment">// b = 2</span></span><br><span class="line">       <span class="comment">// c = 3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">//方法:将后面数组复制一份,用变量替换里面的值</span></span><br><span class="line">       <span class="keyword">const</span> [num1, [[num2], num3]] = [<span class="number">1</span>, [[<span class="number">2</span>], <span class="number">3</span>]];</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(num1)</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(num2)</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(num3)</span><br></pre></td></tr></table></figure><p>​对象模式匹配</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象</span></span><br><span class="line">        <span class="keyword">const</span> stu = &#123;</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">            <span class="attr">age</span>: <span class="number">23</span>,</span><br><span class="line">            <span class="comment">//ES5中方法的写法</span></span><br><span class="line">            <span class="attr">study</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;学习&#x27;</span>)</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//E56中方法可以这么写</span></span><br><span class="line">            <span class="title function_">exam</span>(<span class="params"></span>) &#123;</span><br><span class="line">                <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;考试&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//解构</span></span><br><span class="line">        <span class="keyword">const</span> &#123; <span class="attr">name</span>: username, age, study, exam &#125; = stu</span><br><span class="line"></span><br><span class="line">        <span class="comment">//console.log(name)</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(username) <span class="comment">//起别名,防止跟下面的变量name冲突</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(age)</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(study)</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(exam)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> name = <span class="string">&#x27;qqq&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 解构后可以直接调用</span></span><br><span class="line">        <span class="title function_">exam</span>()</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js的阻塞机制</title>
       <link href="/2023/10/16/js%E7%9A%84%E9%98%BB%E5%A1%9E%E6%9C%BA%E5%88%B6/"/>
       <url>/2023/10/16/js%E7%9A%84%E9%98%BB%E5%A1%9E%E6%9C%BA%E5%88%B6/</url>
@@ -13,7 +32,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -38,7 +57,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -63,7 +82,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -88,10 +107,16 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -107,7 +132,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -132,7 +157,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -157,10 +182,16 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -195,7 +226,7 @@
       
       <categories>
           
-          <category> javascript </category>
+          <category> JavaScript </category>
           
       </categories>
       
