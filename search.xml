@@ -8,9 +8,21 @@
       <link href="/2023/10/25/%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86/"/>
       <url>/2023/10/25/%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="数组遍历总结"><a href="#数组遍历总结" class="headerlink" title="数组遍历总结"></a>数组遍历总结</h1><h2 id="数组遍历4种方式"><a href="#数组遍历4种方式" class="headerlink" title="数组遍历4种方式"></a>数组遍历4种方式</h2><p>​1,普通for循环:速度最快,可读性最差<br>​2,forEach:速度较快,并且可以获取元素和索引,最常用的<br>​3,for…of:只能获取到元素,获取不到索引,可以通过元素获取索引<br>​4,for…in:只能获取到索引,获取不到元素,可以通过索引获取元素</p><h2 id="遍历对象常用方式"><a href="#遍历对象常用方式" class="headerlink" title="遍历对象常用方式"></a>遍历对象常用方式</h2><p>​<strong>for…of</strong> <strong>优势</strong>:可以使用解构的方式快速获取部分数据<br>​<strong>for…in</strong> 可以很方便获取<strong>对象的属性名</strong>(后期可以通过属性名获取属性值)</p><h2 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h2><p>​优先使用forEach,需要能看懂for…of和for…in</p>]]></content>
       
       
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
       
     </entry>
     
