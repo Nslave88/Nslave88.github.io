@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>异步编程</title>
+      <link href="/2023/11/06/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
+      <url>/2023/11/06/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="异步的概念"><a href="#异步的概念" class="headerlink" title="异步的概念"></a>异步的概念</h2><p>同步按你的代码顺序执行，异步不按照代码顺序执行，异步的执行效率更高</p><h2 id="什么时候用异步编程"><a href="#什么时候用异步编程" class="headerlink" title="什么时候用异步编程"></a>什么时候用异步编程</h2><p>主线程作为一个线程，不能够<strong>同时接受</strong>多方面的请求。所以，当一个事件没有结束时，界面将无法处理其他请求。</p><p>为了避免这种情况的发生，我们常常用子线程来完成一些可能消耗时间足够长以至于被用户察觉的事情，比如读取一个大文件或发出一个网络请求。因为子线程<strong>独立</strong>于主线程，所以即使出现阻塞也不会影响主线程的运行。</p><p>但是子线程有一个<strong>局限</strong>：一旦发射了以后就会与主线程失去同步，我们无法确定它的结束，如果结束之后需要处理一些事情，比如来自服务器的信息，我们是无法将它合并到主线程中去的。</p><p>为了<strong>解决</strong>这个问题,JavaScript中的异步操作函数往往通过回调函数来实现异步任务的结果处理。</p><p>[异步编程]: <a href="https://www.runoob.com/js/js-async.html">https://www.runoob.com/js/js-async.html</a>“参考–讲的很通俗”</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>div元素居中原理</title>
       <link href="/2023/10/28/div%E5%85%83%E7%B4%A0%E5%9C%A8%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B1%85%E4%B8%AD/"/>
       <url>/2023/10/28/div%E5%85%83%E7%B4%A0%E5%9C%A8%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B1%85%E4%B8%AD/</url>
