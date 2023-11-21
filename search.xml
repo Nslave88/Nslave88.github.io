@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>node导入导出</title>
+      <link href="/2023/11/21/node%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/"/>
+      <url>/2023/11/21/node%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="回答面试题的思路："><a href="#回答面试题的思路：" class="headerlink" title="回答面试题的思路："></a>回答面试题的思路：</h1><ol><li>先回答node导入导出是什么</li><li>再回答node导入导出怎么用！！！</li><li>常见问题及使用场景</li></ol><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><ol><li>node导入导出是模块化利用其他node中变量或函数的过程</li><li>怎么用？</li><li>导出是通过exports对象实现，这一过程给exports的属性及方法赋予变量及函数</li><li>导入通过require函数，再通过文件名.属性或方法来调用对应的内容</li><li>比如多个导入文件中的变量同名，这时候使用exports来导出可以避免这些变量被导入时的冲突</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> node </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>值和引用</title>
       <link href="/2023/11/16/%E5%80%BC%E5%92%8C%E5%BC%95%E7%94%A8/"/>
       <url>/2023/11/16/%E5%80%BC%E5%92%8C%E5%BC%95%E7%94%A8/</url>
