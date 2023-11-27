@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>超参数调优</title>
+      <link href="/2023/11/27/%E8%B6%85%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98/"/>
+      <url>/2023/11/27/%E8%B6%85%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h1><p>​在深度学习中，<strong>超参数（<code>Hyperparameters</code>）</strong>是指那些不由模型自身学习得到的参数，需要在训练之前设定，并且通常对模型的性能产生显著影响。</p><p>​与之相对的是<strong>模型参数（<code>Model Parameters</code>）</strong></p><p>​<strong>模型参数（<code>Model Parameters</code>）</strong>:这些是模型在训练过程中学习得到的参数，它们用于表示模型的权重和偏差。</p><h1 id="2-常见的深度学习超参数包括"><a href="#2-常见的深度学习超参数包括" class="headerlink" title="2 常见的深度学习超参数包括"></a>2 常见的深度学习超参数包括</h1><ol><li><strong>学习率（Learning Rate）：</strong> 控制参数更新的步长。过大的学习率可能导致模型无法收敛，而过小的学习率可能导致训练过程非常缓慢或者停滞。</li><li><strong>批大小（Batch Size）：</strong> 每次迭代中用于更新模型参数的样本数。较大的批大小可能提高训练速度，但也可能增加内存需求。较小的批大小可能导致模型参数更新的不稳定性。</li><li><strong>迭代次数（Epochs）：</strong> 定义整个数据集在训练过程中的完整迭代次数。迭代次数太少可能导致模型未能充分学习，而迭代次数太多可能导致过拟合。</li><li><strong>神经网络的层数和每层的神经元数：</strong> 这些是神经网络架构的超参数。不同的架构可能适用于不同的问题，而调整层数和神经元数可以影响模型的容量和复杂性。</li><li><strong>正则化参数（Regularization Parameters）：</strong> 正则化用于控制模型的复杂性，以防止过拟合。<code>L1</code>正则化和<code>L2</code>正则化是两种常见的正则化技术，它们涉及到一个权重的惩罚项。</li></ol><h1 id="3-超参数调优的方法"><a href="#3-超参数调优的方法" class="headerlink" title="3 超参数调优的方法"></a>3 超参数调优的方法</h1><p>​超参数的选择通常需要在模型训练<strong>之前</strong>进行调优。在模型训练的过程中，这些<strong>超参数是固定</strong>的，而模型参数则通过学习过程进行调整。<strong>超参数调优</strong>是一个重要的任务，因为不同的超参数<strong>组合</strong>可能导致模型性能的显著<strong>差异</strong>。调优的<strong>方法</strong>包括手动调整、网格搜索、随机搜索和更高级的优化算法，如贝叶斯优化。</p><h1 id="4-为什么要进行超参数调优"><a href="#4-为什么要进行超参数调优" class="headerlink" title="4 为什么要进行超参数调优"></a>4 为什么要进行超参数调优</h1><ol><li><strong>影响模型性能：</strong> 超参数的选择直接关系到模型的性能。通过调整超参数，可以找到最优的组合，从而提高模型的准确性和泛化能力。</li><li><strong>防止过拟合：</strong> 适当的正则化参数可以帮助防止模型对训练数据过度拟合，提高模型在未见过的数据上的泛化能力。</li><li><strong>加速训练过程：</strong> 合适的学习率和批大小选择可以加速模型的训练过程，提高训练效率。</li><li><strong>适应不同问题：</strong> 不同的问题可能需要不同的超参数设置。通过调优超参数，可以使模型更好地适应特定的任务。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>node导入导出---- module.exports和exports的区别</title>
       <link href="/2023/11/21/node%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA--exports/"/>
       <url>/2023/11/21/node%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA--exports/</url>
