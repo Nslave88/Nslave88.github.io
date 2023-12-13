@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>git管理</title>
+      <link href="/2023/12/13/git%E7%AE%A1%E7%90%86/"/>
+      <url>/2023/12/13/git%E7%AE%A1%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Git提交到本地仓库"><a href="#Git提交到本地仓库" class="headerlink" title="Git提交到本地仓库"></a><code>Git</code>提交到本地仓库</h1><p>1.添加到暂存区</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure><p>2.提交到本地仓库</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;xxxx&#x27;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器端项目流程</title>
       <link href="/2023/12/04/json%E9%A1%B9%E7%9B%AE/"/>
       <url>/2023/12/04/json%E9%A1%B9%E7%9B%AE/</url>
