@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>v-model双向绑定</title>
+      <link href="/2023/12/19/v-model%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/"/>
+      <url>/2023/12/19/v-model%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="v-model在内部为不同的输入元素使用不同的property并抛出不同的事件"><a href="#v-model在内部为不同的输入元素使用不同的property并抛出不同的事件" class="headerlink" title="v-model在内部为不同的输入元素使用不同的property并抛出不同的事件"></a><code>v-model</code>在内部为不同的输入元素使用不同的<code>property</code>并抛出不同的事件</h1><p>1.<code>text</code>和<code>textarea</code>元素使用<code>value property</code>和<code>input</code>事件 </p><p>2.<code>checkbox</code>和<code>radio</code>使用<code>checked property</code>和<code>change</code>事件</p><p>3.<code>selct</code>字段将<code>value</code>作为prop并将<code>change</code>作为事件</p><p>在<code>Vue</code>中,双向绑定<code>v-model</code>会忽略所有表单元素的<code>value</code>,<code>ckecked</code>,<code>selected</code>,<code>attribute</code>的初始值而总是<strong>将<code>Vue</code>实例的数据作为数据来源</strong>.应该通过<code>Javascript</code>在组件中的<code>data</code>选项中声明初始值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>attribute和property的区别</title>
       <link href="/2023/12/19/attribute%E5%92%8Cproperty%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
       <url>/2023/12/19/attribute%E5%92%8Cproperty%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
