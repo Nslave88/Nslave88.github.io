@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>attribute和property的区别</title>
+      <link href="/2023/12/19/attribute%E5%92%8Cproperty%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>/2023/12/19/attribute%E5%92%8Cproperty%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<p><code>attribute</code>和<code>property</code>意义都为属性</p><h1 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- attribute是HTML层面的概念(属性节点). 用来设置初始值 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;123&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> ipt = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// property是JS对象的属性</span></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">console</span>.<span class="title function_">log</span>(ipt.<span class="title function_">getAttribute</span>(<span class="string">&#x27;value&#x27;</span>)) <span class="comment">// 123,123是defaultvalue</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">console</span>.<span class="title function_">log</span>(ipt.<span class="property">value</span>) <span class="comment">// value是property, 会随着用户输入的改变而变化</span></span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><code>attribute</code>是节点的默认初始属性,而<code>property</code>是<code>JS</code>对象的属性,会随着用户输入的改变而变化</p><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>在<code>Vue</code>中,双向绑定<code>v-model</code>会忽略所有表单元素的<code>value</code>,<code>ckecked</code>,<code>selected</code>,<code>attribute</code>的初始值而总是<strong>将<code>Vue</code>实例的数据作为数据来源</strong>.应该通过<code>Javascript</code>在组件中的<code>data</code>选项中声明初始值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git管理</title>
       <link href="/2023/12/13/git%E7%AE%A1%E7%90%86/"/>
       <url>/2023/12/13/git%E7%AE%A1%E7%90%86/</url>
