@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>key唯一标识--虚拟DOM--diff算法</title>
+      <link href="/2024/01/11/key%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86---diff%E7%AE%97%E6%B3%95/"/>
+      <url>/2024/01/11/key%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86---diff%E7%AE%97%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="key在v-for绑定唯一标识的作用"><a href="#key在v-for绑定唯一标识的作用" class="headerlink" title="key在v-for绑定唯一标识的作用"></a><code>key</code>在<code>v-for</code>绑定唯一标识的作用</h1><p>保证最大程度的复用之前的<code>DOM</code></p><h1 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a><code>diff</code>算法</h1><p>根据<code>tag</code>(标签)以及<code>key</code>的名字去原来的<code>DOM</code>树里去寻找节点,将原来的节点和现在的节点进行对比—-<code>VDOM</code>树的对比</p><p><code>diff</code>算法比较的依据:<code>tag+key</code>,解决的问题:用<strong>最小</strong>的代价去更新页面</p><h1 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟<code>DOM</code></h1><p>虚拟<code>DOM</code>的子对象是<code>VNode</code></p><h1 id="vue示例"><a href="#vue示例" class="headerlink" title="vue示例"></a><code>vue</code>示例</h1><p><img src="/2024/01/11/key%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86---diff%E7%AE%97%E6%B3%95/diff.png"></p><p>在<code>vue2</code>的源码中,注释为<code>initial render</code>和<code>updates</code></p><p><code>initial render</code>是指初次渲染,即用<code>vnode</code>替换vm实例中el指定的位置,即完成了<strong>挂载</strong></p><p>在<code>updates</code>中,<strong>比较</strong><code>preVnode</code>和<code>vnode</code>的区别,以进行替换vnode并进行更新,这一步用到了<code>diff</code>算法</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>生命周期</title>
       <link href="/2024/01/10/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
       <url>/2024/01/10/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
@@ -71,31 +96,6 @@
         <tags>
             
             <tag> 项目 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>key唯一标识--虚拟DOM--diff算法</title>
-      <link href="/2023/12/28/key%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/"/>
-      <url>/2023/12/28/key%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86/</url>
-      
-        <content type="html"><![CDATA[<h1 id="key在v-for绑定唯一标识的作用"><a href="#key在v-for绑定唯一标识的作用" class="headerlink" title="key在v-for绑定唯一标识的作用"></a><code>key</code>在<code>v-for</code>绑定唯一标识的作用</h1><p>保证最大程度的复用之前的<code>DOM</code></p><h1 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a><code>diff</code>算法</h1><p>根据<code>tag</code>(标签)以及<code>key</code>的名字去原来的<code>DOM</code>树里去寻找节点,将原来的节点和现在的节点进行对比—-<code>VDOM</code>树的对比</p><p><code>diff</code>算法比较的依据:<code>tag+key</code>,解决的问题:用<strong>最小</strong>的代价去更新页面</p><h1 id="虚拟DOM"><a href="#虚拟DOM" class="headerlink" title="虚拟DOM"></a>虚拟<code>DOM</code></h1><p>虚拟<code>DOM</code>的子对象是<code>VNode</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试 </tag>
             
         </tags>
       
