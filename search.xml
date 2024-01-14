@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>v-if和v-for不能连用</title>
+      <link href="/2024/01/14/v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E8%BF%9E%E7%94%A8/"/>
+      <url>/2024/01/14/v-if%E5%92%8Cv-for%E4%B8%8D%E8%83%BD%E8%BF%9E%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一-v-if以及v-for在vue中的用法"><a href="#一-v-if以及v-for在vue中的用法" class="headerlink" title="一.v-if以及v-for在vue中的用法"></a>一.<code>v-if</code>以及<code>v-for</code>在<code>vue</code>中的用法</h2><p><code>v-if</code>在<code>vue</code>中,是动态的向DOM树内添加或者删除DOM元素,相当于js中的<code>if</code>语句</p><p><code>v-for</code>,是循环遍历DOM节点,相当于js中的<code>for</code>语句</p><h2 id="二-js中连用会产生2种情况"><a href="#二-js中连用会产生2种情况" class="headerlink" title="二.js中连用会产生2种情况"></a>二.js中连用会产生2种情况</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//情况一</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">in</span> items )&#123;</span><br><span class="line"><span class="keyword">if</span>(item&gt;<span class="number">0</span>)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//情况二</span></span><br><span class="line"><span class="keyword">if</span>(item&gt;<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">in</span> items)&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们发现<strong>情况二</strong>中,item在for中被定义,但在if中未定义,这样会发生错误</p><p>而在vue中,对一个DOM节点同时使用<code>v-if</code>和<code>v-for</code>,则不能判断是情况一还是情况二,<strong>因此不能连用!!!!!</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>父子组件之间的传值</title>
       <link href="/2024/01/13/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%A0%E5%80%BC/"/>
       <url>/2024/01/13/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%A0%E5%80%BC/</url>
